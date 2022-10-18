@@ -3,7 +3,10 @@ package Hello.core.order;
 import Hello.core.discount.DiscountPolicy;
 import Hello.core.member.Member;
 import Hello.core.member.MemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements  OrderService{
 
 //    private final MemberRepository memberRepository = new MemberMemoryRepository();
@@ -13,6 +16,7 @@ public class OrderServiceImpl implements  OrderService{
     private final DiscountPolicy discountPolicy;
     private final MemberRepository memberRepository;
 
+    @Autowired
     public OrderServiceImpl(DiscountPolicy discountPolicy, MemberRepository memberRepository) {
         this.discountPolicy = discountPolicy;
         this.memberRepository = memberRepository;
