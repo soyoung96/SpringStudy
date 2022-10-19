@@ -15,10 +15,10 @@ import org.springframework.stereotype.Component;
 )
 public class AutoAppConfig {
 
-    @Bean("memberMemoryRepository")
-    MemberRepository memberRepository(){
-        return new MemberMemoryRepository();
-    }
-
+//    @Bean("memberMemoryRepository")
+//    MemberRepository memberRepository(){
+//        return new MemberMemoryRepository();
+//    }
+//
 
 }
